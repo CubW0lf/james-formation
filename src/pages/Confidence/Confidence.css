@@ -1,0 +1,25 @@
+.Confidence {
+  background: linear-gradient(var(--dark), var(--primary));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  color: var(--white);
+}
+
+.Confidence ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Confidence li {
+  color: var(--white);
+}
+
+@media screen and (min-width: 1440px) {
+  .Confidence {
+    height: 10vh;
+  }
+}

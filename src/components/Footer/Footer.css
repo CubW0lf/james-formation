@@ -1,0 +1,72 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
+}
+
+.top {
+  background-color: var(--dark);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh;
+  color: var(--white);
+}
+
+.top .certification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top .certification img {
+  height: 10vh;
+}
+
+.top .siret {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.top .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.top .infos .socials ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top svg {
+  fill: var(--white);
+}
+
+.bottom {
+  width: 100%;
+  padding: 2vh;
+  background-color: black;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .Footer {
+    padding-bottom: 0;
+  }
+
+  .top {
+    flex-direction: row;
+  }
+}

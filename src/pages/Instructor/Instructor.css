@@ -1,0 +1,23 @@
+.Instructor .flex-row {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Instructor .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .Instructor .flex-row {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .Instructor .infos {
+    width: 30%;
+    margin-left: 2vw;
+  }
+}

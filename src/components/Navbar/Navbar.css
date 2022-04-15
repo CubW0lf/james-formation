@@ -1,0 +1,58 @@
+.Navbar {
+  width: 100%;
+  font-family: var(--titleFont);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: var(--white);
+  z-index: 4;
+  bottom: 0;
+  padding: 2vh;
+}
+
+.Navbar ul li {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar ul li a {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 5vh;
+}
+
+.Navbar .logo {
+  height: 7vh;
+  width: 100%;
+  object-fit: contain;
+}
+
+.Navbar .phone {
+  padding: 1vh 2vh;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 80px 80px 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 1440px) {
+  .Navbar {
+    bottom: auto;
+  }
+
+  .Navbar ul li {
+    width: 10vw;
+  }
+
+  .Navbar ul li a {
+    font-size: 2vh;
+  }
+
+  .Navbar .phone svg {
+    margin-right: 0.5vw;
+  }
+}

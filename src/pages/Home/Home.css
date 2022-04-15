@@ -1,0 +1,14 @@
+.Home {
+  position: relative;
+  overflow: hidden;
+}
+
+.Home p {
+  width: 70%;
+}
+
+@media screen and (min-width: 1440px) {
+  .Home {
+    padding-top: 10vh;
+  }
+}

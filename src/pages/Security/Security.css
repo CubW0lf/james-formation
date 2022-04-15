@@ -1,0 +1,55 @@
+.Security {
+  position: relative;
+}
+
+.Security .top {
+  position: relative;
+  display: flex;
+  padding: 5vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--white);
+}
+
+.Security .work {
+  position: relative;
+  height: 45vh;
+}
+
+.Security .bottom {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--dark);
+  width: 100%;
+  color: var(--white);
+}
+
+.Security .bottom ul li {
+  color: var(--white);
+}
+
+@media screen and (min-width: 1440px) {
+  .Security .top {
+    position: absolute;
+    top: 0;
+    height: 50vh;
+  }
+
+  .Security .work {
+    position: absolute;
+    z-index: 3;
+    right: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .Security .bottom {
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+  }
+}

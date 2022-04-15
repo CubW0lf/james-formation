@@ -1,0 +1,39 @@
+.Latest .container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Latest .container > img {
+  height: 35vh;
+}
+
+.Latest ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.Latest ul li {
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Latest ul button {
+  margin-top: 5vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .Latest .container {
+    flex-direction: row;
+  }
+
+  .Latest ul li {
+    font-size: 1vw;
+  }
+}
