@@ -3,14 +3,14 @@ import { getAllCourses } from "../../api/courseApi.js";
 import "./Contact.css";
 
 const Contact = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [company, setCompany] = useState("");
-  const [number, setNumber] = useState(1);
-  const [course, setCourse] = useState("");
-  const [message, setMessage] = useState("");
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [company, setCompany] = useState("");
+  // const [number, setNumber] = useState(1);
+  // const [course, setCourse] = useState("");
+  // const [message, setMessage] = useState("");
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {

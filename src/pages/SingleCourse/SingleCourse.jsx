@@ -12,7 +12,7 @@ const SingleCourse = () => {
 
   useEffect(() => {
     findCourse(id).then((data) => setCourse(data));
-  }, []);
+  }, [id]);
 
   console.log(course);
   return (
