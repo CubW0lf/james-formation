@@ -13,7 +13,7 @@ const Footer = () => {
           <img src={qualiopi} alt="" />
         </div>
         <div className="siret">
-          <span>SIRET 89890789</span>
+          <span>SIRET 89873719200010</span>
           <span>CODE APE/NAF 8559A</span>
           <span>
             N° 84380786638 déclaré auprès du préfet

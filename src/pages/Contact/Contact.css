@@ -1,0 +1,46 @@
+.Contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.Contact .input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Contact .input-container input {
+  background-color: #eee;
+  width: 47%;
+}
+
+.Contact select {
+  background-color: #eee;
+  width: 100%;
+  border: none;
+  height: 8vh;
+  padding: 1vh;
+  font-size: 2vw;
+  color: var(--dark);
+}
+
+.Contact textarea {
+  background-color: #eee;
+  margin-top: 2vh;
+  padding: 1vh;
+  border: none;
+}
+
+.Contact button {
+  margin-top: 2vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .Contact {
+    padding: 10vh 2vw 2vw 2vw;
+  }
+}

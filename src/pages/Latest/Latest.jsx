@@ -4,6 +4,7 @@ import "./Latest.css";
 import { useEffect, useState } from "react";
 import { getAllCourses } from "../../api/courseApi";
 import { strLimit } from "../../utils/utils.js";
+import { Link } from "react-router-dom";
 
 const Latest = () => {
   const [latest, setLatest] = useState([]);
@@ -22,7 +23,9 @@ const Latest = () => {
               {strLimit(l.name, 40)}
             </li>
           ))}
-          <button>Catalogue</button>
+          <Link to="/formations">
+            <button>Catalogue</button>
+          </Link>
         </ul>
         <img src={formation} alt="Formations" />
       </div>

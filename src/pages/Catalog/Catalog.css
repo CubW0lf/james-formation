@@ -1,12 +1,21 @@
 .Catalog .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1vw;
-  padding: 2vw;
 }
 
 .Catalog .grid img {
   height: 20vh;
   width: 100%;
   object-fit: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .Catalog {
+    padding: 10vh 2vw 2vw 2vw;
+  }
+
+  .Catalog .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

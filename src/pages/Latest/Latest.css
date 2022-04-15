@@ -29,6 +29,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .Latest {
+    padding: 2vw;
+  }
   .Latest .container {
     flex-direction: row;
   }

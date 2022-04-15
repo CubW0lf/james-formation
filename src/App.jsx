@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
 import Catalog from "./pages/Catalog/Catalog";
 import Contact from "./pages/Contact/Contact";
+import SingleCourse from "./pages/SingleCourse/SingleCourse";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/presentations" element={<About />} />
         <Route path="/formations" element={<Catalog />} />
+        <Route path="/formations/:id" element={<SingleCourse />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

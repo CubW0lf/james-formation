@@ -1,0 +1,159 @@
+.SingleCourse .top {
+  background-color: var(--primary);
+  height: auto;
+  position: relative;
+  padding: 10vw 2vw 2vw 2vw;
+}
+
+.SingleCourse .top h1 {
+  color: var(--white);
+  font-size: 7vw;
+}
+
+.SingleCourse .top h2 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+}
+
+.SingleCourse .top a {
+  color: var(--white);
+  width: 100%;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  top: 1vw;
+  transform: translateX(50%);
+}
+
+.SingleCourse .top li,
+.SingleCourse .top p {
+  color: var(--white);
+}
+
+.SingleCourse .featured-image {
+  position: relative;
+  height: 35vh;
+  width: 100%;
+  object-fit: cover;
+  top: 50%;
+  z-index: 2;
+}
+
+.SingleCourse .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5vw 5vw 35vh 5vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.SingleCourse .curve {
+  background: url("../../assets/images/curve.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 110vw;
+  height: 30vh;
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+  z-index: 1;
+}
+
+.SingleCourse .price {
+  width: 40vw;
+  height: 40vw;
+  border: 3vw solid #eee;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.SingleCourse .price p {
+  margin: 0;
+  font-size: 4vw;
+}
+
+.SingleCourse .price .value {
+  color: var(--primary);
+  font-size: 10vw;
+}
+
+.SingleCourse .price .info {
+  color: var(--primary);
+}
+
+@media screen and (min-width: 1440px) {
+  .SingleCourse {
+    padding-top: 10vh;
+  }
+
+  .SingleCourse .top {
+    height: 40vh;
+    padding: 2vw;
+  }
+
+  .SingleCourse .top h1 {
+    color: var(--white);
+    width: 70%;
+    font-size: 2vw;
+  }
+
+  .SingleCourse .top h2 {
+    width: 70%;
+    font-size: 1.3vw;
+    font-weight: 100;
+  }
+
+  .SingleCourse .top a {
+    width: auto;
+    font-size: 2vw;
+    right: 2vw;
+    top: 2vw;
+    transform: translateX(0);
+  }
+
+  .SingleCourse .featured-image {
+    position: absolute;
+    right: 2vw;
+    transform: translateY(-50%);
+    width: 30vw;
+  }
+
+  .SingleCourse .curve {
+    bottom: 1vh;
+  }
+
+  .SingleCourse .price {
+    width: 15vw;
+    height: 15vw;
+    border: 1vw solid #eee;
+    left: auto;
+    right: 2vw;
+    bottom: 10vh;
+  }
+
+  .SingleCourse .price p {
+    font-size: 1.5vw;
+  }
+
+  .SingleCourse .price .value {
+    font-size: 3vw;
+  }
+
+  .SingleCourse .price .info {
+    font-size: 1vw;
+  }
+}

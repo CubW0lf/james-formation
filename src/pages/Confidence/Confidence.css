@@ -8,18 +8,28 @@
   color: var(--white);
 }
 
+.Confidence h2 {
+  color: var(--white);
+}
+
 .Confidence ul {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .Confidence li {
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  text-align: center;
 }
 
 @media screen and (min-width: 1440px) {
   .Confidence {
-    height: 10vh;
+    height: 25vh;
   }
 }

@@ -3,6 +3,7 @@ import { GoLightBulb } from "react-icons/go";
 import { BsPersonCheckFill } from "react-icons/bs";
 import security from "../../assets/images/security.jpg";
 import "./Security.css";
+import { Link } from "react-router-dom";
 
 const Security = () => {
   return (
@@ -11,7 +12,9 @@ const Security = () => {
       <div className="top">
         <h1>Votre Sécurité au coeur de nos priorités</h1>
         <span>Centre de formation axé sur la prévention dans le milieu professionel.</span>
-        <button>Voir Le Catalogue</button>
+        <Link to="/formations">
+          <button>Voir Le Catalogue</button>
+        </Link>
       </div>
       <div className="bottom">
         <h3>Former, informer, expliquer...</h3>
