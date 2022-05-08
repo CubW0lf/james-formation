@@ -1,5 +1,48 @@
 .Security {
   position: relative;
+  width: 100%;
+}
+
+.Security h1 {
+  color: var(--dark);
+  font-size: 3vw;
+  line-height: 0.5;
+  text-align: left;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+.Security h1 span {
+  color: var(--primary);
+  font-size: 4vw;
+  line-height: 0.8;
+}
+
+.Security h1::before {
+  content: "\201C";
+  position: absolute;
+  font-family: arial;
+  color: var(--white);
+  font-size: 10vw;
+  filter: drop-shadow(0 0 1px var(--dark));
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 12%);
+}
+
+.Security h1::after {
+  content: "\201D";
+  position: absolute;
+  font-family: arial;
+  color: var(--white);
+  font-size: 10vw;
+  filter: drop-shadow(0 0 1px var(--dark));
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  transform: translate(100%, 95%);
 }
 
 .Security .top {

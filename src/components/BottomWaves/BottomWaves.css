@@ -1,0 +1,13 @@
+.BottomWaves {
+  position: relative;
+  width: 150%;
+  overflow: hidden;
+  transform: scaleX(-1);
+}
+
+.BottomWaves svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+}

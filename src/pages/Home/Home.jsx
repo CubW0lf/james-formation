@@ -1,3 +1,4 @@
+import PopUp from "../../components/PopUp/PopUp";
 import Companies from "../Companies/Companies";
 import Confidence from "../Confidence/Confidence";
 import Instructor from "../Instructor/Instructor";
@@ -13,6 +14,7 @@ const Home = () => {
       <Security />
       <Confidence />
       <Instructor />
+      <PopUp />
     </div>
   );
 };

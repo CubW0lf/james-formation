@@ -1,0 +1,92 @@
+.PopUp {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  width: 20vw;
+  background-color: var(--white);
+  z-index: 4;
+  transition: all 1s;
+}
+
+.PopUp.hidden {
+  right: 0;
+  transform: translateX(100%);
+  transition: all 1s;
+}
+
+.PopUp .wrapper {
+  position: relative;
+}
+
+.PopUp .wrapper .show {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #eee;
+  width: 3vw;
+  height: 3vw;
+  padding: 0.5vw;
+  z-index: 4;
+  color: var(--dark);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.PopUp .wrapper .show.hidden {
+  transform: translate(0, -50%);
+  transition: all 1s;
+}
+
+.PopUp .wrapper .show.active {
+  transform: translate(-100%, -50%);
+  transition: all 1s;
+}
+
+.PopUp .container {
+  padding: 1vw 2vw;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  z-index: 2;
+}
+
+.PopUp h3 {
+  color: var(--primary);
+}
+
+.PopUp form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0 1vh 0;
+}
+
+.PopUp input {
+  margin-bottom: 0 !important;
+}
+
+.PopUp .close-btn {
+  background-color: #eee;
+  position: absolute;
+  right: 0.5vw;
+  top: 0.5vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vh;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.PopUp button {
+  font-size: 1.5vh;
+}

@@ -5,6 +5,7 @@
   align-items: center;
   background-color: var(--primary);
   padding: 5vh;
+  position: relative;
 }
 
 .Companies h3 {
@@ -12,9 +13,13 @@
 }
 
 .Companies ul {
-  height: 10vh;
+  height: 20vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.Companies ul li {
+  color: var(--white);
 }

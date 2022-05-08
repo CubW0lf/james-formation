@@ -12,6 +12,9 @@
   fill: none;
   stroke-width: 2.8;
   stroke-linecap: round;
+}
+
+li.active .Circle path.percent {
   animation: progress 1s ease-out forwards;
 }
 .Circle path.around {

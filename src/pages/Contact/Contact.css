@@ -1,21 +1,97 @@
+.Contact {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.Contact .container {
+  width: 100%;
+  min-height: 75vh;
+  position: relative;
+  margin: auto;
+}
+
+.Contact .form {
+  background-color: var(--dark);
+  position: relative;
+  padding: 2vw;
+}
+
 .Contact form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5vh;
 }
 
-.Contact .input-container {
+.Contact form h3 {
+  color: var(--primary);
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.Contact .infos {
+  position: relative;
+  padding: 5vw 10vw 5vw 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.Contact .infos p,
+.Contact .infos h2,
+.Contact .infos svg,
+.Contact .infos svg path {
+  color: var(--white);
+  stroke: var(--white) !important;
+}
+
+.Contact .infos p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.Contact .infos svg {
+  margin-right: 2vw;
+  font-size: 4vh;
+}
+
+.Contact .input-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.Contact .input-container input {
-  background-color: #eee;
+.Contact .input-flex-container .input-container {
   width: 47%;
+}
+
+.Contact .input-flex-container .input-container input {
+  margin-bottom: 0;
+}
+
+.Contact .input-flex-container .input-container input:valid ~ span {
+  color: var(--white) !important;
+}
+
+.Contact .input-flex-container .input-container input:valid {
+  color: var(--white) !important;
+  border: 1px solid var(--white);
+}
+
+.Contact .input-flex-container .input-container input:invalid {
+  color: var(--primary) !important;
+  border: 1px solid var(--primary);
+}
+
+.Contact .input-flex-container .input-container input:invalid ~ span {
+  color: var(--primary) !important;
 }
 
 .Contact select {
@@ -29,10 +105,10 @@
 }
 
 .Contact textarea {
-  background-color: #eee;
   margin-top: 2vh;
   padding: 1vh;
-  border: none;
+  border: 1px solid var(--white);
+  color: var(--white);
 }
 
 .Contact button {
@@ -42,5 +118,35 @@
 @media screen and (min-width: 1440px) {
   .Contact {
     padding: 10vh 2vw 2vw 2vw;
+  }
+
+  .Contact .container {
+    max-width: 2000px;
+  }
+  .Contact .form {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2vw 2vw 2vw 15vw;
+  }
+
+  .Contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Contact .infos {
+    position: absolute;
+    width: 35%;
+    height: 90%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
   }
 }
