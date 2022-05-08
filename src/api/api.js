@@ -1,3 +1,3 @@
-const api = "http://51.210.110.248:8055/";
+const api = "https://api.jamesformation.fr/";
 
 export default api;
