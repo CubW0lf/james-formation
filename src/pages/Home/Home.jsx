@@ -1,4 +1,5 @@
 import PopUp from "../../components/PopUp/PopUp";
+import Progress from "../../components/Progress/Progress";
 import Companies from "../Companies/Companies";
 import Confidence from "../Confidence/Confidence";
 import Instructor from "../Instructor/Instructor";
@@ -9,6 +10,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="Home">
+      <Progress />
       <Latest />
       <Companies />
       <Security />

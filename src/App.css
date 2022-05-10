@@ -260,7 +260,7 @@ button {
 
 .input-container {
   position: relative;
-  margin: 0.8vw 0 0.8vw 0;
+  margin: 2.5vh 0 2.5vh 0;
   width: 100%;
 }
 
@@ -268,9 +268,9 @@ button {
   pointer-events: none;
   position: absolute;
   left: 0.5vw;
-  font-size: 1vw;
+  font-size: 4vh;
   top: 0;
-  transform: translateY(-12%);
+  transform: translateY(-1.5vh);
   line-height: 2;
   color: var(--dark);
   opacity: 0.5;
@@ -278,7 +278,8 @@ button {
 }
 
 .input-container input {
-  font-size: 1vw;
+  font-size: 4vh;
+  height: 5vh;
   border: 1px solid var(--dark);
   width: 100%;
 }
@@ -286,9 +287,9 @@ button {
 .input-container input:focus ~ span,
 .input-container input:valid ~ span {
   left: 0;
-  font-size: 0.7vw;
+  font-size: 3vh;
   top: 0;
-  transform: translateY(-1.4vw);
+  transform: translateY(-5.5vh);
   transition: all 0.5s;
 }
 
@@ -369,5 +370,25 @@ button {
 
   .not-mobile {
     display: flex;
+  }
+
+  .input-container {
+    margin: 0.8vw 0 0.8vw 0;
+  }
+
+  .input-container span {
+    font-size: 1vw;
+    transform: translateY(-12%);
+  }
+
+  .input-container input {
+    font-size: 1vw;
+    height: auto;
+  }
+
+  .input-container input:focus ~ span,
+  .input-container input:valid ~ span {
+    font-size: 0.7vw;
+    transform: translateY(-1.4vw);
   }
 }

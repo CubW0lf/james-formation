@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getAllCourses } from "../../api/courseApi.js";
+import { findInfos } from "../../api/infosApi.js";
 import { GrLocation, GrMailOption } from "react-icons/gr";
 import { BsTelephoneFill } from "react-icons/bs";
 import { RiLinkedinFill, RiYoutubeFill } from "react-icons/ri";
@@ -15,10 +16,17 @@ const Contact = () => {
   // const [course, setCourse] = useState("");
   // const [message, setMessage] = useState("");
   const [courses, setCourses] = useState([]);
+  const [infos, setInfos] = useState([]);
 
   useEffect(() => {
     getAllCourses().then((data) => {
       setCourses(data);
+    });
+  }, []);
+
+  useEffect(() => {
+    findInfos(1).then((data) => {
+      setInfos(data);
     });
   }, []);
 
@@ -75,14 +83,14 @@ const Contact = () => {
           <h2>Infos</h2>
           <p>
             <GrLocation />
-            Adresse
+            {infos.adress}
           </p>
           <p>
             <GrMailOption />
-            mail
+            {infos.email}
           </p>
           <p>
-            <BsTelephoneFill /> 07 68 58 98 40
+            <BsTelephoneFill /> {infos.phone}
           </p>
           <ul>
             <li>

@@ -1,3 +1,7 @@
+.Latest {
+  min-height: 90vh;
+}
+
 .Latest .container {
   display: flex;
   flex-direction: column-reverse;

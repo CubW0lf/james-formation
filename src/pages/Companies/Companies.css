@@ -6,6 +6,7 @@
   background-color: var(--primary);
   padding: 5vh;
   position: relative;
+  z-index: 5;
 }
 
 .Companies h3 {
