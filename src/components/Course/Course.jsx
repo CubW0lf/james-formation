@@ -5,7 +5,7 @@ const Course = ({ course }) => {
   return (
     <div className="Course">
       <img src={assets + course.image} alt="" />
-      <p>{course.name}</p>
+      <p className="name">{course.name}</p>
     </div>
   );
 };

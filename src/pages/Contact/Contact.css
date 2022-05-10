@@ -76,22 +76,50 @@
   margin-bottom: 0;
 }
 
-.Contact .input-flex-container .input-container input:valid ~ span {
-  color: var(--white) !important;
+/* input Vide -> label */
+.Contact input[value=""]:not(:focus) + span,
+.Contact input[value=""]:focus + span {
+  color: var(--white);
 }
 
-.Contact .input-flex-container .input-container input:valid {
-  color: var(--white) !important;
+/* input Vide */
+.Contact input[value=""]:not(:focus),
+.Contact input[value=""]:focus {
+  color: var(--white);
   border: 1px solid var(--white);
 }
 
-.Contact .input-flex-container .input-container input:invalid {
-  color: var(--primary) !important;
-  border: 1px solid var(--primary);
+/* Input rempli et valide */
+.Contact input:not([value=""]):not(:focus),
+.Contact input:not([value=""]):focus,
+.Contact input:focus,
+.Contact input {
+  color: var(--white);
+  border: 1px solid var(--white);
 }
 
-.Contact .input-flex-container .input-container input:invalid ~ span {
-  color: var(--primary) !important;
+/* Input rempli et valide -> label */
+.Contact input:not([value=""]):not(:focus) + span,
+.Contact input:not([value=""]):focus + span,
+.Contact input:focus + span,
+.Contact input + span {
+  color: var(--white);
+}
+
+/* Input rempli invalide */
+.Contact input:not([value=""]):not(:focus):invalid,
+.Contact input:not([value=""]):focus:invalid,
+.Contact input:focus:invalid,
+.Contact input:invalid {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+/* Input rempli invalide -> label */
+.Contact input:not([value=""]):not(:focus):invalid + span,
+.Contact input:not([value=""]):focus:invalid + span,
+.Contact input:focus:invalid + span,
+.Contact input:invalid + span {
+  color: var(--primary);
 }
 
 .Contact select {

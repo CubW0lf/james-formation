@@ -1,0 +1,25 @@
+.Course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}
+
+.Course img {
+  height: 100%;
+  width: 95%;
+  object-fit: cover;
+}
+
+.Course .name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vh;
+  color: var(--primary);
+  background-color: var(--dark);
+  padding: 1vh;
+}

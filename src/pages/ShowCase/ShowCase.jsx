@@ -20,8 +20,6 @@ const ShowCase = () => {
     });
   }, []);
 
-  console.log(reviews);
-
   return (
     <>
       <div className="ShowCase">
@@ -31,7 +29,7 @@ const ShowCase = () => {
           <ul className="companies">
             {companies.map((c) => (
               <li key={c.id}>
-                <img src={`${assets}${c.logo}`} className="logo" />
+                <img src={`${assets}${c.logo}`} className="logo" alt={`${c.name}`} />
               </li>
             ))}
           </ul>

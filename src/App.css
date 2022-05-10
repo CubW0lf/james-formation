@@ -97,7 +97,8 @@ input[type="text"],
 input[type="number"],
 input[type="url"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="phone"] {
   padding-left: 1vh;
   background: none;
   color: rgba(0, 0, 0, 0.4);
@@ -293,15 +294,6 @@ button {
   transition: all 0.5s;
 }
 
-.input-container input:invalid {
-  color: var(--primary);
-  border: 1px solid var(--primary);
-}
-
-.input-container input:invalid ~ span {
-  color: var(--primary);
-}
-
 .input-container input:focus ~ span::after,
 .input-container input:valid ~ span::after,
 .input-container input:invalid ~ span::after {
@@ -315,21 +307,22 @@ button {
   transform: translateX(150%);
 }
 
-.message {
+.flash {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 70%;
   height: 10vh;
   color: var(--white);
   font-family: var(--titleFont);
-  font-size: 3rem;
+  font-size: 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  z-index: 10;
 }
 
 .mobile {
@@ -341,7 +334,12 @@ button {
 }
 
 .success {
-  background-color: var(--valid);
+  background-color: var(--success);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--primary);
 }
 
 @media screen and (min-width: 1440px) {
@@ -387,8 +385,10 @@ button {
   }
 
   .input-container input:focus ~ span,
-  .input-container input:valid ~ span {
+  .input-container input:valid ~ span,
+  .input-container input:invalid:not([value=""]) ~ span {
     font-size: 0.7vw;
     transform: translateY(-1.4vw);
+    left: 0;
   }
 }
