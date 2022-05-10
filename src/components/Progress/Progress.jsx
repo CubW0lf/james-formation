@@ -12,7 +12,6 @@ const Progress = () => {
     findInfos(1).then((data) => setInfos(data));
   }, []);
 
-  console.log(infos);
   return (
     <div className={`Progress ${toggle ? "active" : "hidden"}`}>
       <div className="wrapper">

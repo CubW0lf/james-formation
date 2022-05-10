@@ -21,8 +21,8 @@ const Instructors = () => {
       <h1>Nos Formateurs</h1>
       <Swiper spaceBetween={50} slidesPerView={1} navigation={true} modules={[Navigation]}>
         {instructors.map((i) => (
-          <SwiperSlide>
-            <Instructor name={i.fullname} image={i.picture} bio={i.bio} key={i.id} />
+          <SwiperSlide key={i.id}>
+            <Instructor name={i.fullname} image={i.picture} bio={i.bio} />
           </SwiperSlide>
         ))}
       </Swiper>

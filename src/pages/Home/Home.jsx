@@ -1,10 +1,10 @@
 import PopUp from "../../components/PopUp/PopUp";
 import Progress from "../../components/Progress/Progress";
-import Companies from "../Companies/Companies";
 import Confidence from "../Confidence/Confidence";
 import Instructors from "../Instructors/Instructors";
 import Latest from "../Latest/Latest";
 import Security from "../Security/Security";
+import ShowCase from "../ShowCase/ShowCase";
 import "./Home.css";
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
     <div className="Home">
       <Progress />
       <Latest />
-      <Companies />
+      <ShowCase />
       <Security />
       <Confidence />
       <Instructors />
