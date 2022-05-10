@@ -2,7 +2,7 @@ import PopUp from "../../components/PopUp/PopUp";
 import Progress from "../../components/Progress/Progress";
 import Companies from "../Companies/Companies";
 import Confidence from "../Confidence/Confidence";
-import Instructor from "../Instructor/Instructor";
+import Instructors from "../Instructors/Instructors";
 import Latest from "../Latest/Latest";
 import Security from "../Security/Security";
 import "./Home.css";
@@ -15,7 +15,7 @@ const Home = () => {
       <Companies />
       <Security />
       <Confidence />
-      <Instructor />
+      <Instructors />
       <PopUp />
     </div>
   );

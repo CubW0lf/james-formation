@@ -3,7 +3,7 @@
   width: 40vw;
   left: 50%;
   top: 0;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -1%);
   z-index: 10;
   border: 1px solid var(--primary);
   transition: all 0.4s;
@@ -30,6 +30,14 @@
   position: absolute;
   right: 1vh;
   top: 1vh;
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: 0.25vw;
+  cursor: pointer;
+}
+
+.Progress .close-btn svg path {
+  stroke: var(--white);
 }
 
 .Progress .show {
@@ -45,6 +53,7 @@
   border-bottom-right-radius: 25px;
   transition: all 0.4s;
   z-index: -1;
+  cursor: pointer;
 }
 
 .Progress .show.hidden {
