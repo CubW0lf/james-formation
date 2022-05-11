@@ -12,6 +12,16 @@
   padding: 2vh;
 }
 
+.Navbar .certification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar .certification img {
+  height: 7vh;
+}
+
 .Navbar ul li {
   width: 20vw;
   display: flex;

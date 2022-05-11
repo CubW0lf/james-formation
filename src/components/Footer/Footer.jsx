@@ -4,8 +4,8 @@ import qualiopi from "../../assets/images/qualiopi.jpg";
 import { RiLinkedinFill, RiYoutubeFill, RiTimeLine, RiMailLine } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
 import { findInfos } from "../../api/infosApi.js";
-import "./Footer.css";
 import { toPhoneNumber } from "../../utils/utils";
+import "./Footer.css";
 
 const Footer = () => {
   const [infos, setInfos] = useState([]);
