@@ -161,6 +161,7 @@ tr:nth-child(even) td {
 
 a {
   color: var(--primary);
+  position: relative;
 }
 
 p {

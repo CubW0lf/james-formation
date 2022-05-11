@@ -9,13 +9,13 @@ import { Link } from "react-router-dom";
 const Latest = () => {
   const [latest, setLatest] = useState([]);
   useEffect(() => {
-    getAllCourses().then((data) => setLatest(data.slice(0, 3)));
+    getAllCourses().then((data) => setLatest(data));
   }, []);
 
   return (
     <section className="Latest">
+      <h1>Nos Formations</h1>
       <div className="container">
-        <h1>Nos Formations</h1>
         <ul>
           {latest.map((l) => (
             <li key={l.id}>
@@ -23,12 +23,12 @@ const Latest = () => {
               {strLimit(l.name, 40)}
             </li>
           ))}
+          <Link to="/formations" className="catalog">
+            <button>Catalogue</button>
+          </Link>
         </ul>
+        <img src={formation} alt="Formations" />
       </div>
-      <Link to="/formations" className="catalog">
-        <button>Catalogue</button>
-      </Link>
-      <img src={formation} alt="Formations" />
     </section>
   );
 };

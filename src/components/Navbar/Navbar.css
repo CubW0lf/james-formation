@@ -18,8 +18,15 @@
   align-items: center;
 }
 
+.Navbar .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Navbar .certification img {
   height: 7vh;
+  margin-right: 2vw;
 }
 
 .Navbar ul li {
@@ -32,6 +39,21 @@
 .Navbar ul li a {
   color: rgba(0, 0, 0, 0.4);
   font-size: 5vh;
+}
+
+.Navbar ul li a::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transform: translateY(100%);
+  width: 0;
+  z-index: 14;
+  transition: all 1s;
+}
+
+.Navbar ul li a:hover::after {
+  width: 100%;
+  transition: all 1s;
 }
 
 .Navbar .logo {

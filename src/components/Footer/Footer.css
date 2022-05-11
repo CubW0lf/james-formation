@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 5vh;
+  height: 25vh;
   color: var(--white);
 }
 
@@ -29,6 +30,7 @@
 
 .Footer .top .certification img {
   height: 10vh;
+  margin-right: 0.5vw;
 }
 
 .top .siret {
@@ -41,12 +43,32 @@
 .Footer .top .infos {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 10vw;
+  line-height: 3vh;
+}
+
+.Footer .top .infos a {
+  color: var(--white);
 }
 
 .Footer .top .infos svg {
   margin-right: 0.5vw;
+}
+
+.Footer .top .infos .phone svg,
+.Footer .top .infos .schedule svg,
+.Footer .top .infos .mail svg {
+  font-size: 2vh;
+  color: var(--white);
+  z-index: 3;
+  position: relative;
+}
+
+.Footer .top .infos .schedule svg path {
+  stroke: var(--white);
 }
 
 .Footer .top .infos .socials ul {
@@ -67,10 +89,6 @@
   align-items: center;
 }
 
-.Footer .top svg {
-  fill: var(--white);
-}
-
 .Footer .bottom {
   width: 100%;
   padding: 2vh;
@@ -79,6 +97,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 5vh;
 }
 
 .Footer .bottom span {

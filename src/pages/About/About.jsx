@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { findAbout } from "../../api/aboutApi";
+import TopWaves from "../../components/TopWaves/TopWaves";
+import BottomWaves from "../../components/BottomWaves/BottomWaves";
 import "./About.css";
 
 const About = () => {
@@ -12,7 +14,9 @@ const About = () => {
   return (
     <section className="About">
       <h1>Présentation</h1>
-      <p dangerouslySetInnerHTML={{ __html: text }}></p>
+      <TopWaves color="var(--primary)" />
+      <p className="text" dangerouslySetInnerHTML={{ __html: text }}></p>
+      <BottomWaves color="var(--primary)" />
     </section>
   );
 };

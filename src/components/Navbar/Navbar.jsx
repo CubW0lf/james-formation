@@ -43,14 +43,16 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div className="certification">
-        <img src={dd} alt="" />
-        <img src={qualiopi} alt="" />
+      <div className="right">
+        <div className="certification">
+          <img src={dd} alt="" />
+          <img src={qualiopi} alt="" />
+        </div>
+        <a href="tel:0768589840" className="phone">
+          <FaPhoneAlt />
+          <span className="not-mobile">{infos.length !== 0 && toPhoneNumber(infos.phone)}</span>
+        </a>
       </div>
-      <a href="tel:0768589840" className="phone">
-        <FaPhoneAlt />
-        <span className="not-mobile">{infos.length !== 0 && toPhoneNumber(infos.phone)}</span>
-      </a>
     </nav>
   );
 };

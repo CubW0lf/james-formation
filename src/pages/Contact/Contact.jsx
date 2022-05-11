@@ -2,10 +2,10 @@ import { useState, useEffect, useContext } from "react";
 import { getAllCourses } from "../../api/courseApi.js";
 import { contact } from "../../api/messageApi.js";
 import { findInfos } from "../../api/infosApi.js";
-import { GrLocation, GrMailOption } from "react-icons/gr";
-import { BsTelephoneFill } from "react-icons/bs";
+import { MdMail, MdLocationOn, MdSmartphone } from "react-icons/md";
 import { RiLinkedinFill, RiYoutubeFill } from "react-icons/ri";
 import { uxContext } from "../../contexts/uxContext.js";
+import { toPhoneNumber } from "../../utils/utils.js";
 import "./Contact.css";
 
 const Contact = () => {
@@ -148,22 +148,38 @@ const Contact = () => {
         <div className="infos">
           <h2>Infos</h2>
           <p>
-            <GrLocation />
-            {infos.adress}
+            <MdLocationOn />
+            {infos.length !== 0 && `${infos.number} ${infos.street}`}
+            <br />
+            {`${infos.cp} ${infos.city}`}
           </p>
           <p>
-            <GrMailOption />
-            {infos.email}
+            <MdMail />
+            {infos.length !== 0 && (
+              <a href={`mailto:${infos.email}`} className="mail">
+                {infos.email}
+              </a>
+            )}
           </p>
           <p>
-            <BsTelephoneFill /> {infos.phone}
+            <MdSmartphone />
+            {infos.length !== 0 && (
+              <a href={`tel:${infos.phone}`} className="phone">
+                {toPhoneNumber(infos.phone)}
+              </a>
+            )}
           </p>
-          <ul>
+          <h3>Nos Réseaux</h3>
+          <ul className="social">
             <li>
-              <RiLinkedinFill />
+              <a href={infos.linkedin} target="_blank">
+                <RiLinkedinFill />
+              </a>
             </li>
             <li>
-              <RiYoutubeFill />
+              <a href={infos.Youtube} target="_blank">
+                <RiYoutubeFill />
+              </a>
             </li>
           </ul>
         </div>

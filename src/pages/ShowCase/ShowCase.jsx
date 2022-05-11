@@ -4,8 +4,8 @@ import BottomWaves from "../../components/BottomWaves/BottomWaves";
 import TopWaves from "../../components/TopWaves/TopWaves";
 import { findCompanies } from "../../api/companyApi.js";
 import { findReviews } from "../../api/reviewsApi.js";
-import { AiFillStar } from "react-icons/ai";
 import "./ShowCase.css";
+import Stars from "../../components/Stars/Stars.jsx";
 
 const ShowCase = () => {
   const [companies, setCompanies] = useState([]);
@@ -39,11 +39,7 @@ const ShowCase = () => {
                 <p className="name">{r.fullname}</p>
                 <span dangerouslySetInnerHTML={{ __html: r.comment }}></span>
                 <span className="stars">
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
+                  <Stars number={r.rating} />
                 </span>
               </li>
             ))}

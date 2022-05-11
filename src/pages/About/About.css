@@ -1,5 +1,29 @@
+.About {
+  min-height: 70vh;
+}
+
+.About .text {
+  background-color: var(--primary);
+  padding: 5vw;
+  margin: 0;
+}
+
+.About .TopWaves {
+  transform: rotate(180deg) translateY(0);
+  width: 100%;
+  position: relative;
+}
+
+.About .BottomWaves {
+  width: 100%;
+}
+
+.About .text p {
+  color: var(--white);
+}
+
 @media screen and (min-width: 1440px) {
   .About {
-    padding: 10vh 2vw 2vw 2vw;
+    padding: 10vh 0 2vw 0;
   }
 }

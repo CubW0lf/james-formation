@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import dd from "../../assets/images/dd.jpg";
 import qualiopi from "../../assets/images/qualiopi.jpg";
-import { RiLinkedinFill, RiYoutubeFill, RiTimeLine, RiMailLine } from "react-icons/ri";
+import { RiLinkedinFill, RiYoutubeFill, RiMailLine } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
+import { GrSchedule } from "react-icons/gr";
 import { findInfos } from "../../api/infosApi.js";
 import { toPhoneNumber } from "../../utils/utils";
 import "./Footer.css";
@@ -34,22 +35,36 @@ const Footer = () => {
         </div>
         <div className="infos">
           <span className="schedule">
-            <RiTimeLine />
-            Lundi au Samedi de 8h30 à 16h30
+            <GrSchedule />
+            <span>Lundi au Samedi de 8h30 à 16h30</span>
           </span>
           <span className="phone">
-            <FaPhoneAlt /> {infos.length !== 0 && toPhoneNumber(infos.phone)}
+            <FaPhoneAlt />
+            {infos.length !== 0 && (
+              <a href={`tel:${infos.phone}`} className="phone">
+                {toPhoneNumber(infos.phone)}
+              </a>
+            )}
           </span>
           <span className="mail">
-            <RiMailLine /> {infos.length !== 0 && infos.email}
+            <RiMailLine />
+            {infos.length !== 0 && (
+              <a href={`mailto:${infos.email}`} className="mail">
+                {infos.email}
+              </a>
+            )}
           </span>
           <div className="socials">
             <ul>
               <li>
-                <RiLinkedinFill />
+                <a href={infos.linkedin} target="_blank">
+                  <RiLinkedinFill />
+                </a>
               </li>
               <li>
-                <RiYoutubeFill />
+                <a href={infos.Youtube} target="_blank">
+                  <RiYoutubeFill />
+                </a>
               </li>
             </ul>
           </div>
