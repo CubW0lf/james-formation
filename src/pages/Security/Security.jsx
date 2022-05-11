@@ -23,7 +23,7 @@ const Security = () => {
       </div>
       <div className="bottom">
         <TopWaves color="var(--dark)" />
-        <h3>Former, informer, expliquer...</h3>
+        <h2>Former, informer, expliquer...</h2>
         <ul>
           <li>
             <AiOutlineWarning />

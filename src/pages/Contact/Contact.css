@@ -143,6 +143,17 @@
   margin-top: 2vh;
 }
 
+.Contact .errors {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary);
+  color: var(--white);
+  z-index: 10;
+}
+
 @media screen and (min-width: 1440px) {
   .Contact {
     padding: 10vh 2vw 2vw 2vw;

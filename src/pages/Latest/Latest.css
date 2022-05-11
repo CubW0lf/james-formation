@@ -1,16 +1,35 @@
 .Latest {
   min-height: 90vh;
+  position: relative;
+}
+
+.Latest h1 {
+  color: var(--white);
 }
 
 .Latest .container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 2vw 2vw 30vh 2vw;
+  background-color: var(--primary);
 }
 
-.Latest .container > img {
+.Latest .catalog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.Latest img {
   height: 35vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .Latest ul {
@@ -26,6 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--white);
 }
 
 .Latest ul button {
@@ -33,13 +53,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .Latest {
-    padding: 2vw;
-  }
-  .Latest .container {
-    flex-direction: row;
-  }
-
   .Latest ul li {
     font-size: 1vw;
   }

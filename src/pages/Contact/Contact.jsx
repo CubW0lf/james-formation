@@ -9,7 +9,7 @@ import { uxContext } from "../../contexts/uxContext.js";
 import "./Contact.css";
 
 const Contact = () => {
-  // const [error, setError] = useState([]);
+  const [error, setError] = useState([]);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,59 +37,55 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setError([]);
 
-    // if (firstName == "") {
-    //   error.push("Le Prénom ne doit pas être vide");
-    // }
-    // if (lastName == "") {
-    //   error.push("Le nom de famille ne doit pas être vide");
-    // }
-    // if (!email.match(/^\S+@\S+\.\S+$/)) {
-    //   error.push("L'email ne correspond pas");
-    // }
-    // if (!phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)) {
-    //   error.push("Le téléphone ne correspond pas");
-    // }
-    // if (company == "") {
-    //   error.push("Vous devez renseigner votre entreprise");
-    // }
-    // if (course == "") {
-    //   error.push("Vous devez renseigner le cours qui vous interresse");
-    // }
-    // if (message == "") {
-    //   error.push("Vous devez écrire un message");
-    // }
+    setError([]);
 
-    // if (error.length == 0) {
-    //   console.log("ok");
-    //   console.log(error);
-    // } else {
-    //   console.log("pas ok");
-    //   console.log(error);
-    // }
+    if (firstName === "") {
+      error.push("Le Prénom ne doit pas être vide");
+    }
+    if (lastName === "") {
+      error.push("Le nom de famille ne doit pas être vide");
+    }
+    if (!email.match(/^\S+@\S+\.\S+$/)) {
+      error.push("L'email ne correspond pas");
+    }
+    if (!phone.match(/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im)) {
+      error.push("Le téléphone ne correspond pas");
+    }
+    if (company === "") {
+      error.push("Vous devez renseigner votre entreprise");
+    }
+    if (course === "") {
+      error.push("Vous devez renseigner le cours qui vous interresse");
+    }
+    if (message === "") {
+      error.push("Vous devez écrire un message");
+    }
 
-    contact({
-      first_name: firstName,
-      last_name: lastName,
-      email: email,
-      phone: phone,
-      company: company,
-      student_nb: number,
-      course: course,
-      message: message,
-    });
-
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPhone("");
-    setCompany("");
-    setNumber(1);
-    setCourse("");
-    setMessage("");
-
-    handleFlash("success", "Votre Message à bien été envoyé", 3000);
+    if (error.length === 0) {
+      contact({
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        phone: phone,
+        company: company,
+        student_nb: number,
+        course: course,
+        message: message,
+      });
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+      setCompany("");
+      setNumber(1);
+      setCourse("");
+      setMessage("");
+      handleFlash("success", "Votre Message à bien été envoyé", 3000);
+    } else {
+      const text = error.join(", ");
+      handleFlash("error", text, 5000);
+    }
   };
 
   return (
@@ -173,15 +169,6 @@ const Contact = () => {
         </div>
       </div>
       {flash !== "" && <div className={`flash ${flashType !== "" ? flashType : ""}`}>{flash}</div>}
-      {/* {error.length !== 0 && (
-        <div className="error">
-          {error.map((e, index) => (
-            <p className="error" key={index}>
-              {e}
-            </p>
-          ))}
-        </div>
-      )} */}
     </section>
   );
 };

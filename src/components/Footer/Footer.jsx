@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
 import dd from "../../assets/images/dd.jpg";
 import qualiopi from "../../assets/images/qualiopi.jpg";
 import { RiLinkedinFill, RiYoutubeFill, RiTimeLine, RiMailLine } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
+import { findInfos } from "../../api/infosApi.js";
 import "./Footer.css";
+import { toPhoneNumber } from "../../utils/utils";
 
 const Footer = () => {
+  const [infos, setInfos] = useState([]);
+
+  useEffect(() => {
+    findInfos(1).then((data) => {
+      setInfos(data);
+    });
+  }, []);
+
   return (
     <footer className="Footer">
       <div className="top">
@@ -22,6 +33,16 @@ const Footer = () => {
           </span>
         </div>
         <div className="infos">
+          <span className="schedule">
+            <RiTimeLine />
+            Lundi au Samedi de 8h30 à 16h30
+          </span>
+          <span className="phone">
+            <FaPhoneAlt /> {infos.length !== 0 && toPhoneNumber(infos.phone)}
+          </span>
+          <span className="mail">
+            <RiMailLine /> {infos.length !== 0 && infos.email}
+          </span>
           <div className="socials">
             <ul>
               <li>
@@ -32,23 +53,11 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <span>
-            <RiTimeLine />
-            Lundi au Samedi de 8h30 à 16h30
-          </span>
-          <span>
-            <FaPhoneAlt />
-          </span>
-          <span>
-            <RiMailLine />
-          </span>
         </div>
       </div>
       <div className="bottom">
         <span>© 2022 JAMES FORMATION</span>
         <span>Mentions Légales</span>
-        <span>Site : COTTALORDA Vincent</span>
-        <span>Design : Shannon Burg</span>
       </div>
     </footer>
   );

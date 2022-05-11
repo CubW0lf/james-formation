@@ -94,6 +94,52 @@
   font-size: 3vh;
 }
 
+/* input Vide -> label */
+.PopUp input[value=""]:not(:focus) + span,
+.PopUp input[value=""]:focus + span {
+  color: var(--dark);
+}
+
+/* input Vide */
+.PopUp input[value=""]:not(:focus),
+.PopUp input[value=""]:focus {
+  color: var(--dark);
+  border: 1px solid var(--dark);
+}
+
+/* Input rempli et valide */
+.PopUp input:not([value=""]):not(:focus),
+.PopUp input:not([value=""]):focus,
+.PopUp input:focus,
+.PopUp input {
+  color: var(--dark);
+  border: 1px solid var(--dark);
+}
+
+/* Input rempli et valide -> label */
+.PopUp input:not([value=""]):not(:focus) + span,
+.PopUp input:not([value=""]):focus + span,
+.PopUp input:focus + span,
+.PopUp input + span {
+  color: var(--dark);
+}
+
+/* Input rempli invalide */
+.PopUp input:not([value=""]):not(:focus):invalid,
+.PopUp input:not([value=""]):focus:invalid,
+.PopUp input:focus:invalid,
+.PopUp input:invalid {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+/* Input rempli invalide -> label */
+.PopUp input:not([value=""]):not(:focus):invalid + span,
+.PopUp input:not([value=""]):focus:invalid + span,
+.PopUp input:focus:invalid + span,
+.PopUp input:invalid + span {
+  color: var(--primary);
+}
+
 @media screen and (min-width: 1440px) {
   .PopUp {
     width: 40vw;

@@ -1,6 +1,6 @@
 .Progress {
   position: fixed;
-  width: 40vw;
+  width: 94vw;
   left: 50%;
   top: 0;
   transform: translate(-50%, -1%);
@@ -45,10 +45,10 @@
   left: 50%;
   top: 101%;
   transform: translate(-50%, 0);
-  width: 3vw;
-  height: 2vw;
+  width: 30vw;
+  height: 20vw;
   background-color: #eee;
-  padding: 0.5vw;
+  padding: 2vw;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   transition: all 0.4s;
@@ -59,4 +59,31 @@
 .Progress .show.hidden {
   transform: translate(-50%, -105%);
   transition: all 0.4s;
+}
+
+@media screen and (min-width: 1440px) {
+  .Progress {
+    width: 40vw;
+  }
+
+  .Progress .show {
+    position: absolute;
+    left: 50%;
+    top: 101%;
+    transform: translate(-50%, 0);
+    width: 3vw;
+    height: 2vw;
+    background-color: #eee;
+    padding: 0.5vw;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: all 0.4s;
+    z-index: -1;
+    cursor: pointer;
+  }
+
+  .Progress .show.hidden {
+    transform: translate(-50%, -105%);
+    transition: all 0.4s;
+  }
 }

@@ -71,8 +71,25 @@
   color: var(--white);
 }
 
+.Security .bottom h2 {
+  color: var(--white);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -3px;
+}
+
 .Security .bottom ul li {
   color: var(--white);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 4vh;
+  font-size: 1.5vh;
+}
+
+.Security .bottom ul li svg {
+  font-size: 3vh;
+  margin-right: 1vw;
 }
 
 @media screen and (min-width: 1440px) {

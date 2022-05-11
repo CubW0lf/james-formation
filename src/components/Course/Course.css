@@ -17,9 +17,13 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 80%;
+  text-align: center;
   transform: translate(-50%, -50%);
   font-size: 3vh;
-  color: var(--primary);
+  color: var(--white);
   background-color: var(--dark);
-  padding: 1vh;
+  padding: 3vh 5vh 3vh 5vh;
+  margin: 0;
+  line-height: 1;
 }
