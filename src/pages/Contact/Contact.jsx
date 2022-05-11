@@ -172,12 +172,12 @@ const Contact = () => {
           <h3>Nos Réseaux</h3>
           <ul className="social">
             <li>
-              <a href={infos.linkedin} target="_blank">
+              <a href={infos.linkedin} target="_blank" rel="noreferrer">
                 <RiLinkedinFill />
               </a>
             </li>
             <li>
-              <a href={infos.Youtube} target="_blank">
+              <a href={infos.Youtube} target="_blank" rel="noreferrer">
                 <RiYoutubeFill />
               </a>
             </li>

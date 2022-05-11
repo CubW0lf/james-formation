@@ -5,11 +5,11 @@ import "./Stars.css";
 const Stars = ({ number }) => {
   const [stars, setStars] = useState([]);
 
+  setStars([]);
+
   for (let i = 0; i < number; i++) {
     stars.push(<AiFillStar />);
   }
-
-  console.log(stars);
 
   return <div className="Stars">{stars}</div>;
 };

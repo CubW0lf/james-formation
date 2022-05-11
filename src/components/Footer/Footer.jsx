@@ -57,12 +57,12 @@ const Footer = () => {
           <div className="socials">
             <ul>
               <li>
-                <a href={infos.linkedin} target="_blank">
+                <a href={infos.linkedin} target="_blank" rel="noreferrer">
                   <RiLinkedinFill />
                 </a>
               </li>
               <li>
-                <a href={infos.Youtube} target="_blank">
+                <a href={infos.Youtube} target="_blank" rel="noreferrer">
                   <RiYoutubeFill />
                 </a>
               </li>
