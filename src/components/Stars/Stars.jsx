@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiFillStar } from "react-icons/ai";
 import "./Stars.css";
 
 const Stars = ({ number }) => {
   const [stars, setStars] = useState([]);
 
-  setStars([]);
+  useEffect(() => {
+    setStars([]);
+  }, []);
 
   for (let i = 0; i < number; i++) {
-    stars.push(<AiFillStar />);
+    stars.push(<AiFillStar key={i} />);
   }
 
   return <div className="Stars">{stars}</div>;
