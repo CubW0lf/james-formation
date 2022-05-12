@@ -23,7 +23,7 @@ const SingleCourse = () => {
         </Link>
         <h1>{course.length !== 0 && course.name}</h1>
         <h2>Objectifs de la formation</h2>
-        <p dangerouslySetInnerHTML={{ __html: course.length !== 0 && course.description }}></p>
+        <p dangerouslySetInnerHTML={{ __html: course.length !== 0 && course.goal }}></p>
         <div className="wave">
           <div className="container">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

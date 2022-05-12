@@ -1,12 +1,14 @@
 .Circle {
-  height: 5vh;
+  height: 80vw;
 }
+
 .Circle text {
   text-align: center;
   color: var(--white);
   fill: var(--white);
   font-size: 10px;
 }
+
 .Circle path.percent {
   stroke: var(--white);
   fill: none;
@@ -26,5 +28,11 @@ li.active .Circle path.percent {
 @keyframes progress {
   0% {
     stroke-dasharray: 0 100;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Circle {
+    height: 7vw;
   }
 }

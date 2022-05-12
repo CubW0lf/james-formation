@@ -4,18 +4,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: auto;
   color: var(--white);
+  padding-bottom: 15vh;
 }
 
 .Confidence h2 {
   color: var(--white);
+  text-align: center;
 }
 
 .Confidence ul {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 .Confidence li {
@@ -24,12 +27,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10vw;
+  width: 100%;
   text-align: center;
+  margin-top: 5vh;
+}
+
+.Confidence li span {
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 1440px) {
   .Confidence {
-    height: 25vh;
+    padding-bottom: 5vh;
+  }
+  .Confidence ul {
+    flex-direction: row;
+  }
+
+  .Confidence li {
+    width: 10vw;
+  }
+
+  .Confidence h2 {
+    text-align: left;
+  }
+
+  .Confidence li span {
+    font-size: 1vw;
   }
 }

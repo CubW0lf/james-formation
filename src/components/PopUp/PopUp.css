@@ -3,7 +3,7 @@
   border-radius: 25px;
   position: absolute;
   top: 100vh;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -110%);
   left: 50vw;
   width: 80vw;
   background-color: var(--white);
@@ -22,28 +22,27 @@
 }
 
 .PopUp .wrapper .show {
+  top: 0;
+  left: 50%;
+  background-color: #eee;
+  width: 20vw;
+  height: 5vh;
+  padding: 0.5vw;
   border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background-color: rgba(238, 238, 238, 0.5);
-  width: 13vh;
-  height: 15vh;
-  padding: 3vh;
-  z-index: 4;
+  border-top-right-radius: 50%;
+  z-index: -1;
   color: var(--dark);
   cursor: pointer;
-  z-index: 1;
+  position: absolute;
 }
 
 .PopUp .wrapper .show.hidden {
-  transform: translate(0, -50%);
+  transform: translate(-50%, 100%);
   transition: all 1s;
 }
 
 .PopUp .wrapper .show.active {
-  transform: translate(-100%, -50%);
+  transform: translate(-50%, -100%);
   transition: all 1s;
 }
 
@@ -143,6 +142,11 @@
 @media screen and (min-width: 1440px) {
   .PopUp {
     width: 40vw;
+    transform: translate(-50%, -100%);
+  }
+
+  .PopUp.hidden {
+    transform: translate(-50%, 10%);
   }
 
   .PopUp .close-btn {
@@ -164,27 +168,7 @@
   }
 
   .PopUp .wrapper .show {
-    top: 0;
-    left: 50%;
-    background-color: #eee;
     width: 4vw;
     height: 3vw;
-    padding: 0.5vw;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 50%;
-    z-index: 4;
-    color: var(--dark);
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .PopUp .wrapper .show.hidden {
-    transform: translate(0, 100%);
-    transition: all 1s;
-  }
-
-  .PopUp .wrapper .show.active {
-    transform: translate(0, -100%);
-    transition: all 1s;
   }
 }

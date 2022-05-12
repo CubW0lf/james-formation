@@ -14,6 +14,7 @@ const Confidence = () => {
       setPercent(data);
     });
   }, []);
+
   return (
     <>
       <div className="Confidence" ref={ref}>

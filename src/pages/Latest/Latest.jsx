@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getAllCourses } from "../../api/courseApi";
 import { strLimit } from "../../utils/utils.js";
 import { Link } from "react-router-dom";
+import Curve from "../../components/Curve/Curve";
 
 const Latest = () => {
   const [latest, setLatest] = useState([]);
@@ -16,6 +17,7 @@ const Latest = () => {
     <section className="Latest">
       <h1>Nos Formations</h1>
       <div className="container">
+        <img src={formation} alt="Formations" className="not-mobile" />
         <ul>
           {latest.map((l) => (
             <li key={l.id}>
@@ -27,8 +29,8 @@ const Latest = () => {
             <button>Catalogue</button>
           </Link>
         </ul>
-        <img src={formation} alt="Formations" />
       </div>
+      <Curve />
     </section>
   );
 };

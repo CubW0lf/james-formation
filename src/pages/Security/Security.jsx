@@ -2,14 +2,15 @@ import { AiOutlineWarning } from "react-icons/ai";
 import { GoLightBulb } from "react-icons/go";
 import { BsPersonCheckFill } from "react-icons/bs";
 import security from "../../assets/images/security.jpg";
-import "./Security.css";
 import { Link } from "react-router-dom";
 import TopWaves from "../../components/TopWaves/TopWaves";
+import zap from "../../assets/images/courant.png";
+import "./Security.css";
 
 const Security = () => {
   return (
     <section className="Security">
-      <img src={security} alt="" className="work" />
+      <img src={security} alt="" className="work not-mobile" />
       <div className="top">
         <h1>
           Votre <span>Sécurité</span>
@@ -22,8 +23,11 @@ const Security = () => {
         </Link>
       </div>
       <div className="bottom">
+        <div className="title">
+          <h2>Former, informer, expliquer...</h2>
+          <img src={zap} alt="" className="zap" />
+        </div>
         <TopWaves color="var(--dark)" />
-        <h2>Former, informer, expliquer...</h2>
         <ul>
           <li>
             <AiOutlineWarning />

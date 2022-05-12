@@ -2,7 +2,7 @@ import "./Circle.css";
 
 const Circle = ({ value }) => {
   return (
-    <svg viewBox="0 0 36 36" className="Circle">
+    <svg viewBox="0 0 36 36" className="Circle" width="100%" height="100%">
       <path
         className="around"
         strokeDasharray="100, 100"

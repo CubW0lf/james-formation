@@ -1,7 +1,13 @@
 .Catalog {
-  padding: 10vh 2vw 2vw 2vw;
+  padding: 2vw;
 }
 
 .Catalog h1 {
   margin-bottom: 5vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .Catalog {
+    padding: 10vh 2vw 2vw 2vw;
+  }
 }

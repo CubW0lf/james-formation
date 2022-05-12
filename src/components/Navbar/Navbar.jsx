@@ -44,7 +44,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="right">
-        <div className="certification">
+        <div className="certification not-mobile">
           <img src={dd} alt="" />
           <img src={qualiopi} alt="" />
         </div>

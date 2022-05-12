@@ -168,7 +168,6 @@ p {
   font-size: 1rem;
   font-family: var(--font);
   color: var(--dark);
-  margin: 2vh;
 }
 
 h1 {
@@ -217,6 +216,10 @@ button {
 
 /* 5 ID */
 /* 6 Classes */
+
+.App {
+  width: 100%;
+}
 
 .abs-center {
   position: absolute;
@@ -327,11 +330,11 @@ button {
 }
 
 .mobile {
-  display: flex;
+  display: flex !important;
 }
 
 .not-mobile {
-  display: none;
+  display: none !important;
 }
 
 .success {
@@ -364,11 +367,11 @@ button {
   }
 
   .mobile {
-    display: none;
+    display: none !important;
   }
 
   .not-mobile {
-    display: flex;
+    display: flex !important;
   }
 
   .input-container {

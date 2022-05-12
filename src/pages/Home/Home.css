@@ -4,11 +4,19 @@
 }
 
 .Home p {
-  width: 70%;
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 @media screen and (min-width: 1440px) {
   .Home {
     padding-top: 10vh;
+  }
+
+  .Home p {
+    width: 70%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

@@ -4,8 +4,8 @@ import BottomWaves from "../../components/BottomWaves/BottomWaves";
 import TopWaves from "../../components/TopWaves/TopWaves";
 import { findCompanies } from "../../api/companyApi.js";
 import { findReviews } from "../../api/reviewsApi.js";
-import "./ShowCase.css";
 import Stars from "../../components/Stars/Stars.jsx";
+import "./ShowCase.css";
 
 const ShowCase = () => {
   const [companies, setCompanies] = useState([]);
@@ -25,6 +25,7 @@ const ShowCase = () => {
       <div className="ShowCase">
         <TopWaves color="var(--primary)" />
         <h3>Il Nous Font confiance</h3>
+
         <div className="container">
           <ul className="companies">
             {companies.map((c) => (
