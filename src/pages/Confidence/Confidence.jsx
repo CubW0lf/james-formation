@@ -21,7 +21,7 @@ const Confidence = () => {
         <h2>James Formation en quelques chiffres :</h2>
         <ul>
           {percent.map((p) => (
-            <li className={`${inView ? "active" : ""}`} key={p.id}>
+            <li className={`${inView ? "active" : ""}`} key={p.id} title={`Sur ${p.student} étudiants`}>
               <Circle value={p.rating} />
               <span>{p.title}</span>
             </li>

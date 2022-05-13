@@ -11,7 +11,7 @@
 /* Variables */
 
 :root {
-  --white: #fffff9;
+  --white: #fff;
   --dark: #3a3a3a;
   --primary: #df0d0e;
   --grey: #eee;
@@ -131,7 +131,7 @@ table {
   width: 100%;
   max-width: 100%;
   white-space: nowrap;
-  background-color: white;
+  background-color: var(--white);
   margin-bottom: 3vh;
 }
 
@@ -204,7 +204,7 @@ button {
   border: 0;
   border-radius: 0.25rem;
   background: var(--primary);
-  color: white;
+  color: var(--white);
   font-family: var(--titleFont);
   font-size: 10vw;
   line-height: 1.2;

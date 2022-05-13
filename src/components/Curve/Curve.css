@@ -1,5 +1,5 @@
 .Curve .shape-fill {
-  fill: #ffffff;
+  fill: var(--white);
   filter: drop-shadow(0 0 0.5px var(--primary));
 }
 
