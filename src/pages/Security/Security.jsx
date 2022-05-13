@@ -1,13 +1,23 @@
+import { useState, useEffect } from "react";
 import { AiOutlineWarning } from "react-icons/ai";
 import { GoLightBulb } from "react-icons/go";
 import { BsPersonCheckFill } from "react-icons/bs";
-import security from "../../assets/images/security.jpg";
 import { Link } from "react-router-dom";
 import TopWaves from "../../components/TopWaves/TopWaves";
+import security from "../../assets/images/security.jpg";
 import zap from "../../assets/images/courant.png";
 import "./Security.css";
+import { findPhrases } from "../../api/catchPhraseApi";
 
 const Security = () => {
+  const [phrases, setPhrases] = useState([]);
+
+  useEffect(() => {
+    findPhrases().then((data) => {
+      setPhrases(data);
+    });
+  }, []);
+
   return (
     <section className="Security">
       <img src={security} alt="" className="work not-mobile" />
@@ -15,7 +25,7 @@ const Security = () => {
         <h1>
           Votre <span>Sécurité</span>
           <br />
-          au coeur de nos <span>priorités</span>.
+          au coeur de nos <span>priorités</span>
         </h1>
         <p>Centre de formation axé sur la prévention dans le milieu professionel.</p>
         <Link to="/formations">
@@ -31,15 +41,15 @@ const Security = () => {
         <ul>
           <li>
             <AiOutlineWarning />
-            prévenir les risques dans le milieu professionel
+            {phrases.prevent}
           </li>
           <li>
             <GoLightBulb />
-            faire prendre conscience de l'importance de se protéger car les accidents sont vite arrivés
+            {phrases.consciousness}
           </li>
           <li>
             <BsPersonCheckFill />
-            une méthode simple et efficace qui a déjà fait ses preuves
+            {phrases.proof}
           </li>
         </ul>
       </div>

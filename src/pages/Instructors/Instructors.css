@@ -1,7 +1,45 @@
 .Instructors {
   padding: 2vw;
+  margin-top: 10vh;
 }
 
 .Instructors h1 {
   margin-bottom: 5vh;
+}
+
+.Instructors h3 {
+  font-size: 12vw;
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.Instructors p {
+  text-align: center;
+  font-size: 5vw;
+  padding: 2vw;
+  width: 100% !important;
+}
+
+.Instructors .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .Instructors {
+    margin-top: 0;
+  }
+
+  .Instructors h3 {
+    font-size: 2vw;
+    margin-top: 0;
+  }
+
+  .Instructors p {
+    font-size: 2vw;
+    text-align: left;
+  }
 }

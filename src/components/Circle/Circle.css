@@ -1,5 +1,5 @@
 .Circle {
-  height: 80vw;
+  height: 50vw;
 }
 
 .Circle text {
@@ -16,7 +16,7 @@
   stroke-linecap: round;
 }
 
-li.active .Circle path.percent {
+.Circle.active path.percent {
   animation: progress 1s ease-out forwards;
 }
 .Circle path.around {

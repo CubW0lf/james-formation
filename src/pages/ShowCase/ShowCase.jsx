@@ -24,7 +24,7 @@ const ShowCase = () => {
     <>
       <div className="ShowCase">
         <TopWaves color="var(--primary)" />
-        <h3>Il Nous Font confiance</h3>
+        <h2>Il nous font confiance</h2>
 
         <div className="container">
           <ul className="companies">

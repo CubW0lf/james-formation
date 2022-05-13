@@ -61,7 +61,7 @@ const SingleCourse = () => {
           <p className="value">{course.length !== 0 && course.price} €</p>
           <p className="info">Net de TVA</p>
           <br />
-          <p className="duration">{course.length !== 0 && course.duration} heures</p>
+          <p className="duration">{course.length !== 0 && course.duration}</p>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { GrClose } from "react-icons/gr";
-import { MdOutlineUnsubscribe } from "react-icons/md";
+import { IoMailUnreadSharp } from "react-icons/io5";
 import { subscribe } from "../../api/newsLetterApi.js";
 import { uxContext } from "../../contexts/uxContext.js";
 import "./PopUp.css";
@@ -28,7 +28,7 @@ const PopUp = () => {
     <div className={`PopUp ${toggle ? "active" : "hidden"}`}>
       {flash !== "" && <div className={`flash ${flashType !== "" ? flashType : ""}`}>{flash}</div>}
       <div className="wrapper">
-        <MdOutlineUnsubscribe className={`show ${toggle ? "hidden" : "active"}`} onClick={() => setToggle(!toggle)} />
+        <IoMailUnreadSharp className={`show ${toggle ? "hidden" : "active"}`} onClick={() => setToggle(!toggle)} />
         <div className="container">
           <div className="close-btn" onClick={() => setToggle(!toggle)}>
             <GrClose />

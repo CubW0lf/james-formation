@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
 import Catalog from "./pages/Catalog/Catalog";
 import Contact from "./pages/Contact/Contact";
+import Legal from "./pages/Legal/Legal";
 import SingleCourse from "./pages/SingleCourse/SingleCourse";
 import "./App.css";
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/formations" element={<Catalog />} />
           <Route path="/formations/:id" element={<SingleCourse />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/legal" element={<Legal />} />
         </Routes>
         <Footer />
       </div>

@@ -24,14 +24,14 @@
 .PopUp .wrapper .show {
   top: 0;
   left: 50%;
-  background-color: #eee;
+  background-color: var(--primary);
   width: 20vw;
   height: 5vh;
   padding: 0.5vw;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   z-index: -1;
-  color: var(--dark);
+  color: var(--white);
   cursor: pointer;
   position: absolute;
 }
@@ -142,11 +142,11 @@
 @media screen and (min-width: 1440px) {
   .PopUp {
     width: 40vw;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -90%);
   }
 
   .PopUp.hidden {
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 12%);
   }
 
   .PopUp .close-btn {
@@ -168,7 +168,8 @@
   }
 
   .PopUp .wrapper .show {
-    width: 4vw;
-    height: 3vw;
+    width: 6vw;
+    height: 6vw;
+    padding: 1.4vw;
   }
 }

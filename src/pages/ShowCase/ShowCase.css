@@ -11,39 +11,53 @@
   min-height: 80vh;
 }
 
-.ShowCase h3 {
+.ShowCase h2 {
   color: var(--white);
+  font-size: 7vw;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .ShowCase .container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
 
-.ShowCase .container .companies,
-.ShowCase .container .reviews {
+.ShowCase .container .companies {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   text-align: center;
-  height: 40vh;
+  grid-template-columns: 1fr 1fr;
 }
 
-.ShowCase .container .companies li,
-.ShowCase .container .reviews li {
+.ShowCase .container .reviews {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+}
+
+.ShowCase .container .companies li {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.ShowCase .container .reviews li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5vh;
+}
+
 .ShowCase .container .companies .logo {
-  width: 100%;
-  height: 100%;
+  width: 40vw;
+  height: 40vw;
   object-fit: contain;
 }
 
@@ -53,6 +67,7 @@
   color: var(--white);
   margin: 0;
   width: 100%;
+  font-size: 5vw;
 }
 
 .ShowCase .container .reviews .name {
@@ -69,7 +84,6 @@
 }
 
 .ShowCase ul {
-  height: 20vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -95,6 +109,24 @@
 
   .ShowCase .container .companies .logo {
     width: 7vw;
+    height: 7vw;
     object-fit: contain;
+  }
+
+  .ShowCase .container .reviews li {
+    height: 7vw;
+  }
+
+  .ShowCase h2 {
+    font-size: 3vw;
+  }
+
+  .ShowCase .container .reviews p,
+  .ShowCase .container .reviews span {
+    font-size: 1vw;
+  }
+
+  .ShowCase .container .reviews {
+    grid-template-columns: 1fr 1fr;
   }
 }

@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import Circle from "../../components/Circle/Circle";
-import { useInView } from "react-intersection-observer";
 import BottomWaves from "../../components/BottomWaves/BottomWaves";
 import { findPercent } from "../../api/satisfactionApi";
 import "./Confidence.css";
 
 const Confidence = () => {
   const [percent, setPercent] = useState([]);
-  const { ref, inView } = useInView();
 
   useEffect(() => {
     findPercent().then((data) => {
@@ -17,11 +15,11 @@ const Confidence = () => {
 
   return (
     <>
-      <div className="Confidence" ref={ref}>
+      <div className="Confidence">
         <h2>James Formation en quelques chiffres :</h2>
         <ul>
           {percent.map((p) => (
-            <li className={`${inView ? "active" : ""}`} key={p.id} title={`Sur ${p.student} étudiants`}>
+            <li key={p.id} title={`Sur ${p.student} étudiants`}>
               <Circle value={p.rating} />
               <span>{p.title}</span>
             </li>

@@ -1,39 +1,39 @@
-.About .text {
+.Legal .text {
   background-color: var(--primary);
   padding: 7vw;
   margin: 0;
 }
 
-.About h1 {
+.Legal h1 {
   padding-left: 2vw;
 }
 
-.About .text p {
+.Legal .text p {
   font-size: 5vw;
 }
 
-.About .TopWaves {
+.Legal .TopWaves {
   transform: rotate(180deg) translateY(0);
   width: 100%;
   position: relative;
   margin-top: 10vh;
 }
 
-.About .BottomWaves {
+.Legal .BottomWaves {
   margin-bottom: 10vh;
   width: 100%;
 }
 
-.About .text p {
+.Legal .text p {
   color: var(--white);
 }
 
 @media screen and (min-width: 1440px) {
-  .About {
+  .Legal {
     padding: 10vh 0 2vw 0;
   }
 
-  .About .text p {
+  .Legal .text p {
     font-size: 1vw;
   }
 }

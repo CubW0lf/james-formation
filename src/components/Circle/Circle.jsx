@@ -1,8 +1,10 @@
+import { useInView } from "react-intersection-observer";
 import "./Circle.css";
 
 const Circle = ({ value }) => {
+  const { ref, inView } = useInView();
   return (
-    <svg viewBox="0 0 36 36" className="Circle" width="100%" height="100%">
+    <svg viewBox="0 0 36 36" className={`Circle ${inView ? "active" : ""}`} width="100%" height="100%" ref={ref}>
       <path
         className="around"
         strokeDasharray="100, 100"

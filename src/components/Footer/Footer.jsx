@@ -7,6 +7,7 @@ import { GrSchedule } from "react-icons/gr";
 import { findInfos } from "../../api/infosApi.js";
 import { toPhoneNumber } from "../../utils/utils";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [infos, setInfos] = useState([]);
@@ -72,7 +73,7 @@ const Footer = () => {
       </div>
       <div className="bottom">
         <span>© 2022 JAMES FORMATION</span>
-        <span>Mentions Légales</span>
+        <Link to="legal">Mentions Légales</Link>
       </div>
     </footer>
   );

@@ -10,16 +10,18 @@
 
 .Security h1 {
   color: var(--dark);
-  font-size: 9vw;
+  font-size: 7vw;
   line-height: 0.5;
-  text-align: left;
+  text-align: center;
+  width: 100%;
   z-index: 2;
   position: relative;
+  margin-bottom: 5vh;
 }
 
 .Security h1 span {
   color: var(--primary);
-  font-size: 7vw;
+  font-size: 9vw;
   line-height: 0.8;
 }
 
@@ -33,7 +35,7 @@
   z-index: -1;
   top: 0;
   left: 0;
-  transform: translate(-50%, -20%);
+  transform: translate(100%, 20%);
 }
 
 .Security h1::after {
@@ -46,7 +48,7 @@
   z-index: -1;
   bottom: 0;
   right: 0;
-  transform: translate(100%, 95%);
+  transform: translate(-25%, 133%);
 }
 
 .Security .top {
@@ -55,22 +57,25 @@
   padding: 5vw;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   background-color: var(--white);
   width: 100%;
 }
 
 .Security .top p {
-  font-size: 3vh;
+  font-size: 3.5vh;
+  text-align: center;
+  margin-bottom: 5vh;
 }
 
 .Security .work {
   position: relative;
-  height: 45vh;
+  width: 35vw;
+  object-fit: contain;
 }
 
 .Security .bottom {
-  padding: 5vw;
+  padding: 5vw 5vw 0 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +92,7 @@
   letter-spacing: -3px;
   width: 100%;
   text-align: center;
-  font-size: 4vh;
+  font-size: 9vw;
 }
 
 .Security .bottom ul li {
@@ -96,27 +101,28 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  line-height: 3vh;
-  font-size: 2vh;
+  line-height: 9vw;
+  font-size: 6vw;
   text-align: center;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
+  font-weight: 100;
+  font-style: italic;
+  width: 100%;
 }
 
 .Security .bottom ul li svg {
-  font-size: 3vh;
-  margin-right: 1vw;
+  font-size: 10vw;
+  margin-right: 0;
 }
 
 .title {
   position: relative;
   width: 100%;
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
 }
 
 .Security .zap {
-  position: absolute;
-  bottom: -1vh;
-  right: -15%;
+  display: none;
 }
 
 @media screen and (min-width: 1440px) {
@@ -128,21 +134,43 @@
     transform: translateY(-50%);
   }
 
+  .Security .top {
+    align-items: flex-start;
+  }
+
+  .Security .top p {
+    text-align: left;
+  }
+
   .Security .bottom {
     position: relative;
   }
 
   .Security .bottom ul li {
     flex-direction: row;
+    line-height: 6vh;
+    font-size: 2vw;
+    margin-bottom: 2vh;
+  }
+
+  .Security .bottom ul li svg {
+    font-size: 3vw;
+    margin-right: 1vw;
+  }
+
+  .Security .bottom h2 {
+    font-size: 4.5vw;
   }
 
   .Security h1 {
-    font-size: 6vw;
+    font-size: 4vw;
     margin-bottom: 5vh;
+    text-align: left;
+    width: auto;
   }
 
   .Security h1 span {
-    font-size: 4vw;
+    font-size: 5vw;
     line-height: 0.8;
   }
 
@@ -157,15 +185,17 @@
 
   .title {
     width: auto;
+    margin-bottom: 10vh;
   }
 
   .Security .zap {
     position: absolute;
     bottom: -1vh;
-    right: -23%;
+    right: -12%;
   }
 
   .Security .top p {
     width: 40%;
+    margin-bottom: 5vh;
   }
 }

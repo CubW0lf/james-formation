@@ -10,7 +10,7 @@ const Stars = ({ number }) => {
   }, []);
 
   for (let i = 0; i < number; i++) {
-    stars.push(<AiFillStar key={i} />);
+    stars.push(<AiFillStar />);
   }
 
   return <div className="Stars">{stars}</div>;
