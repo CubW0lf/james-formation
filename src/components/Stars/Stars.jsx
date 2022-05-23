@@ -3,17 +3,19 @@ import { AiFillStar } from "react-icons/ai";
 import "./Stars.css";
 
 const Stars = ({ number }) => {
-  const [stars, setStars] = useState([]);
+  const [stars, setStars] = useState(null);
 
   useEffect(() => {
-    setStars([]);
-  }, []);
+    if (stars !== null) {
+      for (let i = 0; i < number; i++) {
+        stars.push({ index: i, icon: <AiFillStar /> });
+      }
+    } else {
+      setStars([]);
+    }
+  }, [number, stars]);
 
-  for (let i = 0; i < number; i++) {
-    stars.push(<AiFillStar />);
-  }
-
-  return <div className="Stars">{stars}</div>;
+  return <div className="Stars">{stars !== null && stars.map((s) => <span key={s.index}>{s.icon}</span>)}</div>;
 };
 
 export default Stars;

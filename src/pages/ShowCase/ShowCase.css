@@ -62,7 +62,7 @@
 }
 
 .ShowCase .container .reviews p,
-.ShowCase .container .reviews span {
+.ShowCase .container .reviews > span {
   text-align: center;
   color: var(--white);
   margin: 0;
@@ -76,7 +76,7 @@
   color: rgb(18, 15, 7);
 }
 
-.ShowCase .container .reviews .stars {
+.ShowCase .container .reviews .stars span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,7 +122,7 @@
   }
 
   .ShowCase .container .reviews p,
-  .ShowCase .container .reviews span {
+  .ShowCase .container .reviews > span {
     font-size: 1vw;
   }
 
