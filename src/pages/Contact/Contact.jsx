@@ -148,13 +148,19 @@ const Contact = () => {
         <div className="infos">
           <h2>Infos</h2>
           <p>
-            <MdLocationOn />
-            {infos.length !== 0 && `${infos.number} ${infos.street}`}
-            <br />
-            {`${infos.cp} ${infos.city}`}
+            <a href={infos.url_map} className="mail" target="_blank" rel="noreferrer">
+              <MdLocationOn />
+            </a>
+            <a href={infos.url_map} className="mail" target="_blank" rel="noreferrer">
+              {infos.length !== 0 && `${infos.number} ${infos.street}`}
+              <br />
+              {`${infos.cp} ${infos.city}`}
+            </a>
           </p>
           <p>
-            <MdMail />
+            <a href={`mailto:${infos.email}`} className="mail">
+              <MdMail />
+            </a>
             {infos.length !== 0 && (
               <a href={`mailto:${infos.email}`} className="mail">
                 {infos.email}
@@ -162,7 +168,9 @@ const Contact = () => {
             )}
           </p>
           <p>
-            <MdSmartphone />
+            <a href={`tel:${infos.phone}`} className="phone">
+              <MdSmartphone />
+            </a>
             {infos.length !== 0 && (
               <a href={`tel:${infos.phone}`} className="phone">
                 {toPhoneNumber(infos.phone)}
